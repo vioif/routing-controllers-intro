@@ -4,16 +4,23 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def welcome
-    @header = "Hey Hi Hello"
-  end
-
-  def new
+    @header = "KITTENS R US"
   end
 
   def kitten
+    set_kitten_url
+  end
+
+  def kittens
+    set_kitten_url
+  end
+
+  def set_kitten_url
     requested_size = params[:size]
     @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
   end
+
+
 
 
 
