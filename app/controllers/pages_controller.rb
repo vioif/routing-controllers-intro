@@ -8,8 +8,11 @@ class PagesController < ApplicationController
   end
 
   def set_kitten_url
-  requested_size = params[:size]
-  @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
+    requested_size = params[:size]
+    @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
   end
+
+
+
 
 end

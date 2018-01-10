@@ -20,6 +20,12 @@ class ApplicationController < ActionController::Base
     @kitten_url = "http://lorempixel.com/#{requested_size}/#{requested_size}/cats"
   end
 
+  def contest
+    flash[:notice] = "Sorry, the contest has ended"
+    redirect_to "/welcome"
+  end
+
+
 
 
 
